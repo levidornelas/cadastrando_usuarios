@@ -100,7 +100,7 @@ def deletar_usuarios(cpf):
     except Exception as e:
         return f'Erro ao excluir usuarios: {e}'
 
-def register_users(username,senha):
+def register_users(username,password):
     try:
         # Conexão ao banco de dados PostgreSQL
         connection = psycopg2.connect(
@@ -113,7 +113,7 @@ def register_users(username,senha):
         cursor = connection.cursor()
         # Inserir dados do aluno
         inserir_sql = """INSERT INTO users (username,password) VALUES (%s, %s)"""
-        gravar_insert = (username,senha)
+        gravar_insert = (username,password)
         cursor.execute(inserir_sql, gravar_insert)
         connection.commit() #garantir que todas as alterações sejam refletidas permanentemente no banco.
         cursor.close()
@@ -144,6 +144,7 @@ def check_login(username,password):
             return 'Login realizado com sucesso.'
         else:
             return 'Login ou senha estão incorretos.'
+        
     except psycopg2.Error as e:
         print(f"Erro ao verificar usuário: {e}")
         return 'Erro ao verificar usuário.'

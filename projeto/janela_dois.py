@@ -8,7 +8,7 @@ class JanelaPrincipal_dois(QMainWindow): #classe principal que vai conter elemen
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Conexão com o banco!")
-        self.setFixedSize(520,500)
+        self.setFixedSize(540,500)
         self.setWindowIcon(QIcon('')) #apontando para imagem que está no mesmo diretório
         self.show() # faz a tela ser exibida
         

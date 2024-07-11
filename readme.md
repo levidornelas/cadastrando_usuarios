@@ -8,3 +8,8 @@ pip install pyqt6
 pip install requests
 ```
 
+### How to run:
+
+```
+Execute o arquivo 'login' para iniciar o programa. Em breve, haverá um instalador.
+```

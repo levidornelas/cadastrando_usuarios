@@ -148,3 +148,4 @@ def check_login(username,password):
     except psycopg2.Error as e:
         print(f"Erro ao verificar usuário: {e}")
         return 'Erro ao verificar usuário.'
+    
